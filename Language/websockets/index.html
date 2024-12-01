@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebSocket Chat</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.8.1/socket.io.min.js"
+      integrity="sha512-8ExARjWWkIllMlNzVg7JKq9RKWPlJABQUNq6YvAjE/HobctjH/NA+bSiDMDvouBVjp4Wwnf1VP1OEv7Zgjtuxw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header-title">Chat</h1>
+    </header>
+    <main class="chat-layout">
+      <aside class="side-section">
+        <header class="side-section-header">
+          <h2 class="side-section-title">Chatrooms</h2>
+        </header>
+        <div class="side-section-content">
+          <button class="side-section-item" onclick="setActive()">
+            Chatroom 1
+          </button>
+        </div>
+      </aside>
+      <div class="chat-container">
+        <ul id="messages" class="messages-list"></ul>
+        <form id="form" class="chat-form">
+          <input
+            type="text"
+            id="input"
+            class="chat-input"
+            autocomplete="off"
+            placeholder="Type message here"
+          />
+          <button class="send-button">Send</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
